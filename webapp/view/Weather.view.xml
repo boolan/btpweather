@@ -1,0 +1,57 @@
+<mvc:View
+    controllerName="btpweather.controller.Weather"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+                        <Bar id="bar0">
+                            <contentRight>
+                                <Button xmlns="sap.m" text="Fake data" id="btnFake" press="getFakedData" />
+                                <Button xmlns="sap.m" text="Get Forecast" id="btnForecast" press="getForecast" />
+                            </contentRight>
+                        </Bar>
+                        <Table noDataText="No data available" items="{/items}" id="tabWeather">
+				        <items>
+				            <ColumnListItem>
+				                <cells>
+				                    <Text text="{date}" />
+				                    <Text text="{temp}" />
+				                    <Text text="{units}" />
+				                    <Text text="{humidity}" />
+				                </cells>				                    
+				            </ColumnListItem>
+				        </items>
+				        <columns>
+				            <Column>
+				                
+				                    <Label text="Date"/>
+				                
+				            </Column>
+                            <Column>
+				               
+				                    <Label text="Temp"/>
+				                
+				            </Column>
+                            <Column>
+				                
+				                    <Label text="Units"/>
+				               
+				            </Column>
+                            <Column>
+				                
+				                    <Label text="Humidity"/>
+				                
+				            </Column>
+				        </columns>
+				    </Table>
+                    </content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

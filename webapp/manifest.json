@@ -18,6 +18,10 @@
                     "localUri": "localService/metadata.xml",
                     "odataVersion": "4.0"
                 }
+            },
+            "weather": {
+                "uri": "Weather",
+                "type": "JSON"
             }
         },
         "crossNavigation": {

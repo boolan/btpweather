@@ -13,14 +13,32 @@ sap.ui.define([
                 this.getView().setModel(oModel);
             },
 
+            _formatDate: function(date){
+                var d = new Date(date),
+                month = ''+ (d.getMonth() + 1),
+                day = ''+ (d.getDate()),
+                year = d.getFullYear();
+                
+                if (month.length < 2){
+                    month = '0' + month;
+                }
+                
+                if (day.length < 2){
+                    day = '0' + day;
+                }
+                
+                return [year, month, day].join('-');
+            },
+
             _mapResults: function (results) {
                 var aForecastResults = [];
                 if (results && results.list && results.list.length) {
                     for (var i = 0; i < results.list.length; i++) {
                         var oTemp = results.list[i].temp;
+                        var sDate=this._formatDate(results.list[i].dt * 1000);
 
                         aForecastResults.push({
-                            date: results.list[i].dt,
+                            date: sDate,
                             temp: oTemp.eve,
                             units: "C",
                             humidity: results.list[i].humidity

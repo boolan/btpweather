@@ -41,7 +41,8 @@ sap.ui.define([
                             date: sDate,
                             temp: oTemp.eve,
                             units: "C",
-                            humidity: results.list[i].humidity
+                            humidity: results.list[i].humidity,
+                            icon: results.list[i].weather[0].icon
                         });
                     }
                 }
@@ -80,7 +81,8 @@ sap.ui.define([
                         date: "Day " + i,
                         temp: Math.round(Math.random() * 20),
                         units: "C",
-                        humidity: Math.round(Math.random() * 100)
+                        humidity: Math.round(Math.random() * 100),
+                        icon: "10d"
                     });
                 }
                 this.getView().getModel().setProperty("/items", aForecastResults);

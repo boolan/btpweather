@@ -23,6 +23,7 @@
 				                    <Text text="{temp}" />
 				                    <Text text="{units}" />
 				                    <Text text="{humidity}" />
+                                    <Image src="{='http://openweathermap.org/img/wn/' + ${icon}+ '.png'}" />
 				                </cells>				                    
 				            </ColumnListItem>
 				        </items>
@@ -45,6 +46,11 @@
                             <Column>
 				                
 				                    <Label text="Humidity"/>
+				                
+				            </Column>
+                            <Column>
+				                
+				                    <Label text="Overall"/>
 				                
 				            </Column>
 				        </columns>

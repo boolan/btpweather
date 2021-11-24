@@ -8,22 +8,7 @@
             "version": "0.0.1"
         },
         "title": "{{appTitle}}",
-        "description": "{{appDescription}}",
-        "dataSources": {
-            "mainService": {
-                "uri": "/sap/opu/odata/",
-                "type": "OData",
-                "settings": {
-                    "annotations": [],
-                    "localUri": "localService/metadata.xml",
-                    "odataVersion": "4.0"
-                }
-            },
-            "weather": {
-                "uri": "Weather",
-                "type": "JSON"
-            }
-        },
+        "description": "{{appDescription}}",        
         "crossNavigation": {
             "inbounds": {
                 "btpweather-inbound": {
@@ -73,17 +58,6 @@
                 "type": "sap.ui.model.resource.ResourceModel",
                 "settings": {
                     "bundleName": "btpweather.i18n.i18n"
-                }
-            },
-            "": {
-                "dataSource": "mainService",
-                "preload": true,
-                "settings": {
-                    "synchronizationMode": "None",
-                    "operationMode": "Server",
-                    "autoExpandSelect": true,
-                    "earlyRequests": true,
-                    "groupId": "$direct"
                 }
             }
         },

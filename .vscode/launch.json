@@ -23,7 +23,8 @@
       "env": {
         "FIORI_TOOLS_UI5_VERSION": "",
         "FIORI_TOOLS_UI5_URI": "https://ui5.sap.com",
-        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/btpweather\"}"
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/btpweather\"}",
+        "FIORI_TOOLS_BACKEND_CONFIG": "[{\"path\":\"/sap\",\"destination\":\"WeatherAPI\"}]"
       }
     }
   ]

@@ -9,8 +9,10 @@ server:
       configuration:
         ignoreCertError: false # If set to true, certificate errors will be ignored. E.g. self-signed certificates will be accepted
         backend:
-          - path: /sap
-            url: http://localhost
+          - path: /Weather
+            pathPrefix: /
+            url: https://api.openweathermap.org
+            destination: WeatherAPI
         ui5:
           path:
             - /resources

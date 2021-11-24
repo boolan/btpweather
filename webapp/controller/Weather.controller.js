@@ -45,13 +45,11 @@ sap.ui.define([
                             icon: results.list[i].weather[0].icon
                         });
                     }
-                }
-                console.table(aForecastResults);
+                }                
                 this.getView().getModel().setProperty("/items", aForecastResults);
             },
 
             getForecast: function () {
-                var oView = this.getView();
                 var oParams = {
                     q: "Wroclaw",
                     units: "metric",
